@@ -151,43 +151,49 @@ export default function ValentineGenshinChestPage() {
           </button>
         ) : (
           <div 
-            className={`
-              relative bg-gradient-to-br from-[#1c1438] to-[#2c1e4e] p-12 rounded-3xl 
-              border-4 border-[#c9a028]/70 shadow-2xl shadow-purple-950/60
-              animate-reveal-letter opacity-0 scale-90
-              ${isOpened ? 'animate-reveal-active' : ''}
-            `}
-          >
-            {/* Floating letter / scroll emerging from chest */}
-            <div className="relative mx-auto max-w-lg bg-gradient-to-b from-[#fff8e1] via-[#fff0c7] to-[#ffe8ad] p-10 rounded-xl shadow-2xl border-8 border-[#d4b35f]/60 transform rotate-[-2deg] animate-float-letter">
-              {/* Wax seal / emblem */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#b8963e] rounded-full border-8 border-amber-300 shadow-lg flex items-center justify-center">
-                <Heart size={40} className="text-red-500" fill="currentColor" />
-              </div>
+  className={`
+    relative bg-gradient-to-br from-[#1c1438] to-[#2c1e4e] p-6 md:p-12 rounded-3xl 
+    border-4 border-[#c9a028]/70 shadow-2xl shadow-purple-950/60
+    animate-reveal-letter opacity-0 scale-90
+    ${isOpened ? 'animate-reveal-active' : ''}
+  `}
+>
+  {/* Floating letter / scroll emerging from chest */}
+  <div className="relative mx-auto max-w-lg bg-gradient-to-b from-[#fff8e1] via-[#fff0c7] to-[#ffe8ad] p-6 md:p-10 rounded-xl shadow-2xl border-4 md:border-8 border-[#d4b35f]/60 transform rotate-[-2deg] animate-float-letter">
+    {/* Wax seal / emblem */}
+    <div className="absolute -top-8 md:-top-10 left-1/2 -translate-x-1/2 w-16 h-16 md:w-24 md:h-24 bg-[#b8963e] rounded-full border-4 md:border-8 border-amber-300 shadow-lg flex items-center justify-center">
+      <Heart size={30} className="text-red-500 md:hidden" fill="currentColor" />
+      <Heart size={40} className="text-red-500 hidden md:block" fill="currentColor" />
+    </div>
 
-              <div className="text-center space-y-6 pt-8">
-                <Sparkles size={60} className="mx-auto text-yellow-400 animate-spin-slow drop-shadow-[0_0_25px_gold]" />
-                
-                <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 drop-shadow-[0_0_20px_pink]">
-                  С Днем Валентина Моя Дорогая Ке Цин! 💞💞💞💞💞
-                </h2>
+    <div className="text-center space-y-4 md:space-y-6 pt-6 md:pt-8">
+      <Sparkles size={40} className="mx-auto text-yellow-400 animate-spin-slow drop-shadow-[0_0_25px_gold] md:hidden" />
+      <Sparkles size={60} className="mx-auto text-yellow-400 animate-spin-slow drop-shadow-[0_0_25px_gold] hidden md:block" />
+      
+      <h2 className="text-2xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 drop-shadow-[0_0_20px_pink] break-words">
+        С Днем Валентина Моя Дорогая Ке Цин! 💞💞💞💞💞
+      </h2>
 
-                <p className="text-2xl text-gray-800 font-serif leading-relaxed tracking-wide">
-                  Я поздравляю тебя с этим прекрасным праздником всех влюбленных, хоть мы и знакомы не так долго,но ты очень приятный человек и мне хочется общатся с тобой и узнавать о тебе больше! 
-                  Пусть этот день станет оссобенее, моя валентинка!
-                </p> 
+      <p className="text-base md:text-2xl text-gray-800 font-serif leading-relaxed tracking-wide break-words hyphens-auto">
+        Я поздравляю тебя с этим прекрасным праздником всех влюбленных, хоть мы и знакомы не так долго,но ты очень приятный человек и мне хочется общатся с тобой и узнавать о тебе больше! 
+        Пусть этот день станет оссобенее, моя валентинка!
+      </p> 
 
-                <div className="flex justify-center gap-8 mt-8">
-                  <Heart size={56} className="text-red-500 animate-pulse" fill="currentColor" />
-                  <Heart size={56} className="text-pink-500 animate-pulse" fill="currentColor" style={{ animationDelay: '0.4s' }} />
-                  <Heart size={56} className="text-purple-500 animate-pulse" fill="currentColor" style={{ animationDelay: '0.8s' }} />
-                </div>
-              </div>
-            </div>
+      <div className="flex justify-center gap-4 md:gap-8 mt-6 md:mt-8">
+        <Heart size={36} className="text-red-500 animate-pulse md:hidden" fill="currentColor" />
+        <Heart size={36} className="text-pink-500 animate-pulse md:hidden" fill="currentColor" style={{ animationDelay: '0.4s' }} />
+        <Heart size={36} className="text-purple-500 animate-pulse md:hidden" fill="currentColor" style={{ animationDelay: '0.8s' }} />
+        
+        <Heart size={56} className="text-red-500 animate-pulse hidden md:block" fill="currentColor" />
+        <Heart size={56} className="text-pink-500 animate-pulse hidden md:block" fill="currentColor" style={{ animationDelay: '0.4s' }} />
+        <Heart size={56} className="text-purple-500 animate-pulse hidden md:block" fill="currentColor" style={{ animationDelay: '0.8s' }} />
+      </div>
+    </div>
+  </div>
 
-            {/* Subtle glow rays from "chest" below */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-yellow-300/30 to-transparent blur-xl opacity-70" />
-          </div>
+  {/* Subtle glow rays from "chest" below */}
+  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-yellow-300/30 to-transparent blur-xl opacity-70" />
+</div>
         )}
 
         {isOpened && (
