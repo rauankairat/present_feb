@@ -195,7 +195,7 @@ export default function ValentineGenshinChestPage() {
             onClick={handleClose}
             className="mt-12 text-amber-300 hover:text-amber-100 text-xl underline underline-offset-4 transition-all duration-300 hover:scale-105"
           >
-            Close the chest & keep the letter
+            Назад
           </button>
         )}
       </div>
