@@ -1,0 +1,67 @@
+@keyframes glow-soft {
+    0%, 100% { text-shadow: 0 0 20px rgba(255,105,180,0.5); }
+    50% { text-shadow: 0 0 45px rgba(255,105,180,0.8); }
+  }
+  
+  @keyframes float-particle {
+    0%, 100% { 
+      transform: translateY(0) translateX(0); 
+      opacity: 0.4; 
+    }
+    50% { 
+      transform: translateY(-40vh) translateX(30px); 
+      opacity: 0.1; 
+    }
+  }
+  
+  @keyframes reveal-letter {
+    0% { 
+      opacity: 0; 
+      transform: scale(0.6) translateY(80px) rotate(5deg); 
+    }
+    60% { 
+      opacity: 0.3; 
+      transform: scale(1.12) translateY(-15px) rotate(-3deg); 
+    }
+    100% { 
+      opacity: 1; 
+      transform: scale(1) translateY(0) rotate(-2deg); 
+    }
+  }
+  
+  @keyframes float-letter {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-12px) rotate(-1deg); }
+  }
+  
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Particle styles using CSS variables */
+  .particle {
+    width: var(--particle-width);
+    height: var(--particle-height);
+    left: var(--particle-left);
+    top: var(--particle-top);
+    animation: float-particle linear infinite;
+    animation-delay: var(--particle-delay);
+    animation-duration: var(--particle-duration);
+  }
+  
+  .animate-glow-soft { 
+    animation: glow-soft 4s ease-in-out infinite; 
+  }
+  
+  .animate-reveal-letter { 
+    animation: reveal-letter 1.4s ease-out forwards 0.4s; 
+  }
+  
+  .animate-float-letter { 
+    animation: float-letter 6s ease-in-out infinite; 
+  }
+  
+  .animate-spin-slow { 
+    animation: spin-slow 30s linear infinite; 
+  }
