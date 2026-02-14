@@ -194,10 +194,6 @@ export default function ValentineGenshinChestPage() {
   {/* Subtle glow rays from "chest" below */}
   <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-yellow-300/30 to-transparent blur-xl opacity-70" />
 </div>
-
-  {/* Subtle glow rays from "chest" below */}
-  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-yellow-300/30 to-transparent blur-xl opacity-70" />
-</div>
         )}
 
         {isOpened && (
